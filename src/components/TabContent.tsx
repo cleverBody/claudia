@@ -94,9 +94,9 @@ const TabPanel: React.FC<TabPanelProps> = ({ tab, isActive }) => {
             <div className="container mx-auto p-6">
               {/* Header */}
               <div className="mb-6">
-                <h1 className="text-3xl font-bold tracking-tight">CC Projects</h1>
+                <h1 className="text-3xl font-bold tracking-tight">{t("navigation.projects.title")}</h1>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Browse your Claude Code sessions
+                  {t("navigation.projects.subtitle")}
                 </p>
               </div>
 
@@ -215,7 +215,7 @@ const TabPanel: React.FC<TabPanelProps> = ({ tab, isActive }) => {
               // Go back to projects view in the same tab
               updateTab(tab.id, {
                 type: 'projects',
-                title: 'CC Projects',
+                title: t("navigation.projects.title"),
               });
             }}
           />

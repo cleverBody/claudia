@@ -316,12 +316,6 @@ function AppContent() {
                   <p className="mt-1 text-sm text-muted-foreground">
                     {t("navigation.projects.subtitle")}
                   </p>
-                  {/* Debug info - remove after fixing */}
-                  {process.env.NODE_ENV === 'development' && (
-                    <div className="text-xs text-red-500 mt-2">
-                      Debug: Current lang: {getCurrentLanguage()}, Title: "{t("navigation.projects.title")}", Subtitle: "{t("navigation.projects.subtitle")}"
-                    </div>
-                  )}
                 </div>
               </motion.div>
 
