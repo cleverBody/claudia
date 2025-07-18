@@ -181,6 +181,7 @@
     "fromFile": "From File",
     "fromGitHub": "From GitHub",
     "export": "Export",
+    "view": "View",
     "confirm": {
       "delete": "Confirm delete?",
       "clear": "Confirm clear?",
@@ -776,5 +777,18 @@
       "gitIgnoreWarning": "It's recommended to add .claude/settings.local.json to .gitignore to avoid accidentally committing local settings.",
       "addToGitIgnore": "Add to .gitignore"
     }
+  },
+  "agentManagement": {
+    "title": "Agent Management",
+    "description": "Create new agents or manage running agent executions",
+    "tabs": {
+      "availableAgents": "Available Agents",
+      "runningAgents": "Running Agents"
+    },
+    "noAgentsAvailable": "No agents available",
+    "createFirstAgent": "Create your first agent to get started",
+    "noRunningAgents": "No running agents",
+    "executionsWillAppear": "Agent executions will appear here when started",
+    "started": "Started"
   }
 }
