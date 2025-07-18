@@ -401,6 +401,7 @@ export const ReadWidget: React.FC<{ filePath: string; result?: any }> = ({ fileP
  * Widget for Read tool result - shows file content with line numbers
  */
 export const ReadResultWidget: React.FC<{ content: string; filePath?: string }> = ({ content, filePath }) => {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(false);
   
   // Extract file extension for syntax highlighting
@@ -571,6 +572,7 @@ export const ReadResultWidget: React.FC<{ content: string; filePath?: string }> 
  * Widget for Glob tool
  */
 export const GlobWidget: React.FC<{ pattern: string; result?: any }> = ({ pattern, result }) => {
+  const { t } = useTranslation();
   // Extract result content if available
   let resultContent = '';
   let isError = false;
@@ -871,6 +873,7 @@ export const GrepWidget: React.FC<{
   exclude?: string;
   result?: any;
 }> = ({ pattern, include, path, exclude, result }) => {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(true);
   
   // Extract result content if available

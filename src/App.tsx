@@ -47,7 +47,7 @@ type View =
  * AppContent component - Contains the main app logic, wrapped by providers
  */
 function AppContent() {
-  const { t, getCurrentLanguage } = useTranslation();
+  const { t } = useTranslation();
   const [view, setView] = useState<View>("tabs");
   const { createClaudeMdTab, createSettingsTab, createUsageTab, createMCPTab } = useTabState();
   const [projects, setProjects] = useState<Project[]>([]);

@@ -1,5 +1,5 @@
-import { create } from 'zustand';
-import { subscribeWithSelector } from 'zustand/middleware';
+// import { create } from 'zustand';
+// import { subscribeWithSelector } from 'zustand/middleware';
 import { api } from '@/lib/api';
 import type { Session, Project } from '@/lib/api';
 
@@ -30,6 +30,9 @@ interface SessionState {
   handleOutputUpdate: (sessionId: string, output: string) => void;
 }
 
+// Temporarily disabled - zustand not available
+export const useSessionStore = null as any;
+/*
 export const useSessionStore = create<SessionState>()(
   subscribeWithSelector((set, get) => ({
     // Initial state
@@ -181,3 +184,4 @@ export const useSessionStore = create<SessionState>()(
     }
   }))
 );
+*/

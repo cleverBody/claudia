@@ -91,7 +91,7 @@ export function createChineseInputHandler(callback: (value: string) => void): {
     onCompositionStart: () => {
       isComposing = true;
     },
-    onCompositionEnd: (e) => {
+    onCompositionEnd: (_e) => {
       isComposing = false;
       // 输入法组合结束后，使用最终值触发回调
       callback(composedValue);

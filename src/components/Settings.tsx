@@ -26,7 +26,6 @@ import { StorageTab } from "./StorageTab";
 import { HooksEditor } from "./HooksEditor";
 import { SlashCommandsManager } from "./SlashCommandsManager";
 import { useTranslation } from "@/hooks/useTranslation";
-import { useThemeContext } from "@/contexts/ThemeContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface SettingsProps {
