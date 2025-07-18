@@ -348,7 +348,6 @@ export const LSResultWidget: React.FC<{ content: string }> = ({ content }) => {
  * Widget for Read tool
  */
 export const ReadWidget: React.FC<{ filePath: string; result?: any }> = ({ filePath, result }) => {
-  const { t } = useTranslation();
   // If we have a result, show it using the ReadResultWidget
   if (result) {
     let resultContent = '';
@@ -633,6 +632,7 @@ export const BashWidget: React.FC<{
   description?: string;
   result?: any;
 }> = ({ command, description, result }) => {
+  const { t } = useTranslation();
   // Extract result content if available
   let resultContent = '';
   let isError = false;

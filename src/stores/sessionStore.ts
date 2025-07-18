@@ -1,9 +1,9 @@
 // import { create } from 'zustand';
 // import { subscribeWithSelector } from 'zustand/middleware';
-import { api } from '@/lib/api';
-import type { Session, Project } from '@/lib/api';
+// import { api } from '@/lib/api';
+// import type { Session, Project } from '@/lib/api';
 
-interface SessionState {
+// interface SessionState {
   // Projects and sessions data
   projects: Project[];
   sessions: Record<string, Session[]>; // Keyed by projectId
