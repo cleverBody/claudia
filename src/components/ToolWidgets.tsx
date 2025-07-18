@@ -62,6 +62,7 @@ import { open } from "@tauri-apps/plugin-shell";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "@/hooks/useTranslation";
 
 /**
  * Widget for TodoWrite tool - displays a beautiful TODO list
@@ -347,6 +348,7 @@ export const LSResultWidget: React.FC<{ content: string }> = ({ content }) => {
  * Widget for Read tool
  */
 export const ReadWidget: React.FC<{ filePath: string; result?: any }> = ({ filePath, result }) => {
+  const { t } = useTranslation();
   // If we have a result, show it using the ReadResultWidget
   if (result) {
     let resultContent = '';
@@ -507,7 +509,7 @@ export const ReadResultWidget: React.FC<{ content: string; filePath?: string }> 
         <div className="flex items-center gap-2">
           <FileText className="h-3.5 w-3.5 text-muted-foreground" />
           <span className="text-xs font-mono text-muted-foreground">
-            {filePath || "File content"}
+            {filePath || t("tools.common.fileContent")}
           </span>
           {isLargeFile && (
             <span className="text-xs text-muted-foreground">
@@ -521,7 +523,7 @@ export const ReadResultWidget: React.FC<{ content: string; filePath?: string }> 
             className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors"
           >
             <ChevronRight className={cn("h-3 w-3 transition-transform", isExpanded && "rotate-90")} />
-            {isExpanded ? "Collapse" : "Expand"}
+            {isExpanded ? t("tools.common.collapse") : t("tools.common.expand")}
           </button>
         )}
       </div>
@@ -558,7 +560,7 @@ export const ReadResultWidget: React.FC<{ content: string; filePath?: string }> 
       
       {isLargeFile && !isExpanded && (
         <div className="px-4 py-3 text-xs text-muted-foreground text-center bg-zinc-900/30">
-          Click "Expand" to view the full file
+          {t("tools.common.clickExpandToView")}
         </div>
       )}
     </div>
@@ -614,7 +616,7 @@ export const GlobWidget: React.FC<{ pattern: string; result?: any }> = ({ patter
             ? "border-red-500/20 bg-red-500/5 text-red-400" 
             : "border-green-500/20 bg-green-500/5 text-green-300"
         )}>
-          {resultContent || (isError ? "Search failed" : "No matches found")}
+          {resultContent || (isError ? t("tools.common.searchFailed") : t("tools.common.noMatchesFound"))}
         </div>
       )}
     </div>
@@ -682,7 +684,7 @@ export const BashWidget: React.FC<{
               ? "border-red-500/20 bg-red-500/5 text-red-400" 
               : "border-green-500/20 bg-green-500/5 text-green-300"
           )}>
-            {resultContent || (isError ? "Command failed" : "Command completed")}
+            {resultContent || (isError ? t("tools.common.commandFailed") : t("tools.common.commandCompleted"))}
           </div>
         )}
       </div>
@@ -996,7 +998,7 @@ export const GrepWidget: React.FC<{
             <div className="flex items-center gap-3 p-4 rounded-lg bg-red-500/10 border border-red-500/20">
               <AlertCircle className="h-5 w-5 text-red-500 flex-shrink-0" />
               <div className="text-sm text-red-600 dark:text-red-400">
-                {resultContent || "Search failed"}
+                {resultContent || t("tools.common.searchFailed")}
               </div>
             </div>
           ) : grepResults.length > 0 ? (
@@ -1061,7 +1063,7 @@ export const GrepWidget: React.FC<{
             <div className="flex items-center gap-3 p-4 rounded-lg bg-amber-500/10 border border-amber-500/20">
               <Info className="h-5 w-5 text-amber-500 flex-shrink-0" />
               <div className="text-sm text-amber-600 dark:text-amber-400">
-                No matches found for the given pattern.
+                {t("tools.common.noMatchesFound")}
               </div>
             </div>
           )}

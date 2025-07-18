@@ -1,0 +1,780 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "close": "Close",
+    "open": "Open",
+    "refresh": "Refresh",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "clear": "Clear",
+    "reset": "Reset",
+    "submit": "Submit",
+    "apply": "Apply",
+    "remove": "Remove",
+    "add": "Add",
+    "update": "Update",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "copy": "Copy",
+    "paste": "Paste",
+    "cut": "Cut",
+    "undo": "Undo",
+    "redo": "Redo",
+    "select": "Select",
+    "selectAll": "Select All",
+    "deselect": "Deselect",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "maximize": "Maximize",
+    "minimize": "Minimize",
+    "fullscreen": "Full Screen",
+    "exitFullscreen": "Exit Full Screen",
+    "language": "Language",
+    "previous": "Previous",
+    "pageInfo": "Page {{current}} of {{total}}",
+    "deleting": "Deleting...",
+    "saving": "Saving..."
+  },
+  "navigation": {
+    "welcome": {
+      "title": "Welcome to Claudia",
+      "subtitle": "Claude Code Session Browser"
+    },
+    "projects": {
+      "title": "CC Projects",
+      "subtitle": "Browse your Claude Code sessions"
+    },
+    "agents": {
+      "title": "CC Agents",
+      "subtitle": "Manage your intelligent agents"
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Configure application settings"
+    },
+    "usage": {
+      "title": "Usage",
+      "subtitle": "View usage statistics"
+    },
+    "mcp": {
+      "title": "MCP",
+      "subtitle": "Model Context Protocol Management"
+    },
+    "backToHome": "Back to Home",
+    "goBack": "Go Back",
+    "goForward": "Go Forward",
+    "about": "About"
+  },
+  "projects": {
+    "list": {
+      "title": "Project List",
+      "empty": "No projects found in ~/.claude/projects",
+      "loadError": "Failed to load projects. Please ensure ~/.claude directory exists.",
+      "noProjects": "No projects"
+    },
+    "session": {
+      "new": "New Claude Code Session",
+      "running": "Running Sessions",
+      "loadError": "Failed to load sessions for this project.",
+      "create": "Create Session",
+      "open": "Open Session",
+      "delete": "Delete Session",
+      "rename": "Rename Session"
+    },
+    "actions": {
+      "createProject": "Create Project",
+      "deleteProject": "Delete Project",
+      "openProject": "Open Project",
+      "projectSettings": "Project Settings"
+    }
+  },
+  "sessions": {
+    "list": {
+      "title": "Session List",
+      "empty": "No sessions",
+      "loadError": "Failed to load sessions"
+    },
+    "actions": {
+      "newSession": "New Session",
+      "openSession": "Open Session",
+      "deleteSession": "Delete Session",
+      "renameSession": "Rename Session",
+      "leaveActiveSession": "Claude is still responding. If you leave now, Claude will continue running in the background.\n\nYou can return to this session from the project view.\n\nDo you want to continue?"
+    },
+    "status": {
+      "running": "Running",
+      "stopped": "Stopped",
+      "error": "Error",
+      "completed": "Completed"
+    },
+    "firstMessage": "First Message",
+    "hasTodos": "Has Todos"
+  },
+
+  "agents": {
+    "title": "Agents",
+    "list": {
+      "title": "Agent List",
+      "empty": "No agents",
+      "loadError": "Failed to load agents",
+      "createFirst": "Create your first CC agent to get started"
+    },
+    "actions": {
+      "createAgent": "Create Agent",
+      "editAgent": "Edit Agent",
+      "deleteAgent": "Delete Agent",
+      "runAgent": "Run Agent",
+      "stopAgent": "Stop Agent",
+      "exportSuccess": "Agent exported successfully",
+      "importSuccess": "Agent imported successfully from GitHub"
+    },
+    "status": {
+      "idle": "Idle",
+      "running": "Running",
+      "completed": "Completed",
+      "error": "Error",
+      "stopped": "Stopped"
+    },
+    "recentExecutions": "Recent Executions"
+  },
+  "errors": {
+    "system": {
+      "fileNotFound": "File not found",
+      "networkError": "Network connection error",
+      "permissionDenied": "Permission denied",
+      "unknownError": "Unknown error"
+    },
+    "validation": {
+      "required": "This field is required",
+      "invalidFormat": "Invalid format",
+      "tooShort": "Too short",
+      "tooLong": "Too long",
+      "invalidEmail": "Invalid email format",
+      "invalidUrl": "Invalid URL format"
+    },
+    "user": {
+      "permissionDenied": "Permission denied",
+      "operationFailed": "Operation failed",
+      "sessionExpired": "Session expired"
+    },
+    "loading": {
+      "projectsFailed": "Failed to load projects",
+      "sessionsFailed": "Failed to load sessions",
+      "agentsFailed": "Failed to load agents",
+      "settingsFailed": "Failed to load settings"
+    }
+  },
+  "actions": {
+    "import": "Import",
+    "fromFile": "From File",
+    "fromGitHub": "From GitHub",
+    "export": "Export",
+    "confirm": {
+      "delete": "Confirm delete?",
+      "clear": "Confirm clear?",
+      "reset": "Confirm reset?",
+      "logout": "Confirm logout?",
+      "exit": "Confirm exit?",
+      "deleteAgent": "Are you sure you want to delete this agent? This action cannot be undone and will permanently delete the agent and all its related data."
+    },
+    "success": {
+      "saved": "Saved successfully",
+      "deleted": "Deleted successfully",
+      "created": "Created successfully",
+      "updated": "Updated successfully",
+      "copied": "Copied successfully"
+    },
+    "buttons": {
+      "tryAgain": "Try Again",
+      "learnMore": "Learn More",
+      "getStarted": "Get Started",
+      "continue": "Continue",
+      "finish": "Finish",
+      "skip": "Skip"
+    },
+    "common": {
+      "previous": "Previous",
+      "next": "Next",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "deleting": "Deleting..."
+    }
+  },
+  "execution": {
+    "labels": {
+      "task": "Task",
+      "model": "Model",
+      "projectPath": "Project Path"
+    },
+    "placeholders": {
+      "enterTask": "Enter the task for the agent",
+      "selectProjectPath": "Select or enter project path"
+    },
+    "buttons": {
+      "execute": "Execute",
+      "stop": "Stop",
+      "fullscreen": "Fullscreen",
+      "close": "Close",
+      "copyOutput": "Copy Output",
+      "copyAsJsonl": "Copy as JSONL",
+      "copyAsMarkdown": "Copy as Markdown",
+      "hooks": "Hooks",
+      "selectPath": "Select Project Directory"
+    },
+    "status": {
+      "readyToExecute": "Ready to Execute",
+      "readyToExecuteDesc": "Select a project path and enter a task to run the agent",
+      "initializingAgent": "Initializing agent...",
+      "executionStopped": "Execution stopped by user",
+      "executionFailed": "Agent execution failed",
+      "executionCancelled": "Agent execution was cancelled"
+    },
+    "models": {
+      "sonnet": "Claude 4 Sonnet",
+      "opus": "Claude 4 Opus"
+    },
+    "dialogs": {
+      "leaveRunning": "An agent is currently running. If you navigate away, the agent will continue running in the background. You can view running sessions in the 'Running Sessions' tab within CC Agents.\n\nDo you want to continue?",
+      "hooksTitle": "Hooks Configuration",
+      "hooksDescription": "Configure hooks settings for this project",
+      "projectSettings": "Project Settings",
+      "localSettings": "Local Settings",
+      "projectHooksDesc": "Project hooks are stored in .claude/settings.json and are committed to version control.",
+      "localHooksDesc": "Local hooks are stored in .claude/settings.local.json and are not committed to version control."
+    },
+    "errors": {
+      "noRunId": "No run ID available to stop",
+      "failedToExecute": "Failed to execute agent: {{error}}",
+      "failedToStop": "Failed to stop execution: {{error}}",
+      "unknownError": "Unknown error"
+    }
+  },
+  "fileEditor": {
+    "buttons": {
+      "save": "Save",
+      "saving": "Saving..."
+    },
+    "status": {
+      "loading": "Loading...",
+      "saved": "File saved successfully",
+      "error": "Error saving file"
+    }
+  },
+  "about": {
+    "title": "CLAUDIA v0.1.0",
+    "subtitle": "[ A STRATEGIC PROJECT BY ASTERISK ]",
+    "sections": {
+      "credits": "━━━ CREDITS ━━━",
+      "dependencies": "━━━ DEPENDENCIES ━━━"
+    },
+    "credits": {
+      "poweredBy": "POWERED BY",
+      "claudeCode": "CLAUDE CODE",
+      "mcpProtocol": "MCP PROTOCOL",
+      "runtime": "RUNTIME",
+      "uiFramework": "UI FRAMEWORK",
+      "styling": "STYLING"
+    },
+    "names": {
+      "anthropicClaude": "Anthropic Claude 4",
+      "ultimateCodingAssistant": "The Ultimate Coding Assistant",
+      "modelContextProtocol": "Model Context Protocol",
+      "tauriFramework": "Tauri Framework",
+      "reactTypeScript": "React + TypeScript",
+      "tailwindShadcn": "Tailwind CSS + shadcn/ui"
+    }
+  },
+  "tools": {
+    "common": {
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "fileContent": "File content",
+      "clickExpandToView": "Click \"Expand\" to view the full file",
+      "searchFailed": "Search failed",
+      "noMatchesFound": "No matches found",
+      "commandFailed": "Command failed",
+      "commandCompleted": "Command completed",
+      "truncatedToChars": "Truncated to 1000 chars"
+    },
+    "todo": {
+      "searchPlaceholder": "Search todos...",
+      "all": "All",
+      "pending": "Pending",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "cancelled": "Cancelled",
+      "noTodosMatch": "No todos match your filters",
+      "noTodosAvailable": "No todos available",
+      "exportJson": "Export JSON",
+      "exportMarkdown": "Export Markdown",
+      "list": "List",
+      "board": "Board",
+      "timeline": "Timeline",
+      "stats": "Stats"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Configure application settings",
+    "saveSettings": "Save Settings",
+    "general": {
+      "title": "General",
+      "generalSettings": "General Settings",
+      "includeCoAuthoredBy": "Include Co-authored-by",
+      "includeCoAuthoredByDesc": "Include co-author information in commit messages",
+      "verboseOutput": "Verbose Output",
+      "verboseOutputDesc": "Show detailed debug information",
+      "cleanupPeriod": "Cleanup Period (days)",
+      "cleanupPeriodDesc": "Number of days to automatically clean up old files",
+      "claudeInstallation": "Claude Installation",
+      "claudeInstallationDesc": "Configure Claude Code binary path",
+      "binaryPathChanged": "Binary path changed, application restart required"
+    },
+    "permissions": {
+      "title": "Permissions",
+      "description": "Control which tools Claude Code can use without manual approval",
+      "allowRules": "Allow Rules",
+      "denyRules": "Deny Rules",
+      "addRule": "Add Rule",
+      "removeRule": "Remove Rule",
+      "noAllowRules": "No allow rules configured. Claude will request approval for all tools.",
+      "noDenyRules": "No deny rules configured.",
+      "allowRulePlaceholder": "e.g., Bash(npm run test:*)",
+      "denyRulePlaceholder": "e.g., Bash(curl:*)",
+      "examples": "Examples",
+      "exampleBash": "Allow all bash commands",
+      "exampleExact": "Allow exact command",
+      "examplePrefix": "Allow commands with prefix",
+      "exampleRead": "Allow reading specific file",
+      "exampleEdit": "Allow editing files in docs directory"
+    },
+    "environment": {
+      "title": "Environment",
+      "description": "Environment variables applied to every Claude Code session",
+      "addVariable": "Add Variable",
+      "keyPlaceholder": "KEY",
+      "valuePlaceholder": "value",
+      "noVariables": "No environment variables configured.",
+      "commonVariables": "Common variables",
+      "telemetryDesc": "Enable/disable telemetry (0 or 1)",
+      "modelDesc": "Custom model name",
+      "costWarningsDesc": "Disable cost warnings (1)"
+    },
+    "advanced": {
+      "title": "Advanced",
+      "description": "Additional configuration options for advanced users",
+      "apiKeyHelper": "API Key Helper Script",
+      "apiKeyHelperDesc": "Custom script to generate auth values for API requests",
+      "apiKeyHelperPlaceholder": "/path/to/generate_api_key.sh",
+      "rawJsonDescription": "This shows the raw JSON that will be saved to ~/.claude/settings.json",
+      "rawSettingsJson": "Raw Settings (JSON)"
+    },
+    "hooks": {
+      "title": "Hooks",
+      "userHooks": "User Hooks",
+      "userHooksDesc": "Configure hooks that apply to all Claude Code sessions for your user account. These are stored in"
+    },
+    "commands": {
+      "title": "Commands"
+    },
+    "storage": {
+      "title": "Storage",
+      "databaseStorage": "Database Storage",
+      "searchPlaceholder": "Search tables...",
+      "buttons": {
+        "sqlQuery": "SQL Query",
+        "resetDb": "Reset DB",
+        "newRow": "New Row"
+      },
+      "dialogs": {
+        "newRow": {
+          "title": "New Row",
+          "description": "Add a new row to the {table} table."
+        },
+        "sqlEditor": {
+          "title": "SQL Query Editor",
+          "description": "Execute raw SQL queries on the database. Use with caution.",
+          "queryLabel": "SQL Query"
+        }
+      }
+    },
+    "claude": {
+      "notFound": "Claude not found",
+      "selectPath": "Select Path",
+      "install": "Install Claude Code",
+      "loadError": "Failed to load Claude installations",
+      "selectInstallation": "Select Claude installation",
+      "versionUnknown": "Version unknown",
+      "recommended": "Recommended",
+      "system": "System",
+      "custom": "Custom",
+      "saveSelection": "Save Selection",
+      "multipleInstallationsFound": "Multiple Claude Code installations were found on your system. Please select which one you'd like to use.",
+      "notFoundMessage": "Claude Code was not found in any of the common installation locations. Please install Claude Code to continue.",
+      "searchedLocations": "Searched locations",
+      "tip": "Tip",
+      "installTip": "You can install Claude Code using",
+      "installationGuide": "Installation Guide",
+      "validating": "Validating...",
+      "noInstallationsFound": "No Installations Found",
+      "installationTitle": "Claude Code Installation",
+      "loadingInstallations": "Loading available installations...",
+      "errorLoadingInstallations": "Error loading installations",
+      "installationDescription": "Choose your preferred Claude Code installation. Bundled version is recommended for best compatibility.",
+      "availableInstallations": "Available Installations",
+      "selectedInstallation": "Selected Installation"
+    },
+    "messages": {
+      "saveSuccess": "Settings saved successfully!",
+      "saveError": "Failed to save settings",
+      "unsavedChanges": "You have unsaved changes. Are you sure you want to leave?"
+    }
+  },
+  "createAgent": {
+    "title": {
+      "create": "Create CC Agent",
+      "edit": "Edit CC Agent"
+    },
+    "subtitle": {
+      "create": "Create a new Claude Code agent",
+      "edit": "Update your Claude Code agent"
+    },
+    "form": {
+      "basicInformation": "Basic Information",
+      "agentName": "Agent Name",
+      "agentNamePlaceholder": "e.g., Code Assistant",
+      "agentNameRequired": "Agent name is required",
+      "agentIcon": "Agent Icon",
+      "model": "Model",
+      "models": {
+        "sonnet": {
+          "name": "Claude 4 Sonnet",
+          "description": "Faster, efficient for most tasks"
+        },
+        "opus": {
+          "name": "Claude 4 Opus",
+          "description": "More capable, better for complex tasks"
+        }
+      },
+      "defaultTask": "Default Task (Optional)",
+      "defaultTaskPlaceholder": "e.g., Review this code for security issues",
+      "defaultTaskDescription": "This will be used as the default task placeholder when executing the agent",
+      "systemPrompt": "System Prompt",
+      "systemPromptDescription": "Define the behavior and capabilities of your CC Agent",
+      "systemPromptRequired": "System prompt is required"
+    },
+    "buttons": {
+      "save": "Save",
+      "saving": "Saving..."
+    },
+    "messages": {
+      "createError": "Failed to create agent",
+      "updateError": "Failed to update agent",
+      "unsavedChanges": "You have unsaved changes. Are you sure you want to leave?"
+    }
+  },
+  "mcp": {
+    "title": "MCP Servers",
+    "description": "Manage Model Context Protocol servers",
+    "configuredServers": "Configured Servers",
+    "serversConfigured": "{{count}} server{{count !== 1 ? 's' : ''}} configured",
+    "refresh": "Refresh",
+    "noServers": "No MCP servers configured",
+    "noServersDescription": "Add a server to get started with Model Context Protocol",
+    "tabs": {
+      "servers": "Servers",
+      "add": "Add",
+      "import": "Import"
+    },
+    "messages": {
+      "serverAdded": "MCP server added successfully!",
+      "serverRemoved": "Server \"{{name}}\" removed successfully!",
+      "importSuccess": "Successfully imported {{count}} server{{count > 1 ? 's' : ''}}!",
+      "importPartial": "Imported {{imported}} server{{imported > 1 ? 's' : ''}}, {{failed}} failed",
+      "importError": "Import failed",
+      "loadError": "Failed to load MCP servers. Make sure Claude Code is installed."
+    }
+  },
+  "usage": {
+    "title": "Usage Dashboard",
+    "dateRanges": {
+      "all": "All Time",
+      "7d": "Last 7 Days",
+      "30d": "Last 30 Days"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "models": "By Model",
+      "projects": "By Project",
+      "sessions": "By Session",
+      "timeline": "Timeline"
+    },
+    "stats": {
+      "totalCost": "Total Cost",
+      "totalTokens": "Total Tokens",
+      "totalSessions": "Total Sessions",
+      "avgCostPerSession": "Avg Cost per Session",
+      "inputTokens": "Input Tokens",
+      "outputTokens": "Output Tokens",
+      "cacheWrite": "Cache Write",
+      "cacheRead": "Cache Read"
+    },
+    "tokenBreakdown": "Token Breakdown",
+    "mostUsedModels": "Most Used Models",
+    "topProjects": "Top Projects",
+    "usageByModel": "Usage by Model",
+    "usageByProject": "Usage by Project",
+    "usageBySession": "Usage by Session",
+    "dailyUsage": "Daily Usage",
+    "dailyUsageOverTime": "Daily Usage Over Time",
+    "buttons": {
+      "tryAgain": "Try Again"
+    },
+    "loading": "Loading usage statistics...",
+    "error": "Failed to load usage statistics"
+  },
+  "github": {
+    "title": "GitHub Agent Browser",
+    "search": {
+      "placeholder": "Search agents...",
+      "noResults": "No agents found matching your search",
+      "noAgents": "No agents available"
+    },
+    "buttons": {
+      "tryAgain": "Try Again",
+      "import": "Import",
+      "close": "Close",
+      "viewDetails": "View Details",
+      "cancel": "Cancel"
+    },
+    "status": {
+      "imported": "Imported",
+      "importing": "Importing..."
+    },
+    "repositoryInfo": "Agents are fetched from",
+    "contributeInfo": "You can contribute your custom agents to the repository!",
+    "systemPrompt": "System Prompt",
+    "defaultTask": "Default Task",
+    "messages": {
+      "loadError": "Failed to load agent details",
+      "importError": "Failed to import agent: {{error}}",
+      "importSuccess": "Agent imported successfully",
+      "fetchError": "Failed to fetch agents from GitHub. Please check your internet connection."
+    }
+  },
+  "storage": {
+    "buttons": {
+      "sqlQuery": "SQL Query",
+      "resetDb": "Reset DB",
+      "newRow": "New Row"
+    },
+    "searchPlaceholder": "Search tables..."
+  },
+  "checkpoint": {
+    "title": "Checkpoint Settings",
+    "close": "Close",
+    "experimentalFeature": "Experimental Feature",
+    "experimentalWarning": "Checkpointing may affect directory structure or cause data loss. Use with caution.",
+    "automaticCheckpoints": "Automatic Checkpoints",
+    "automaticCheckpointsDesc": "Automatically create checkpoints based on the selected strategy",
+    "checkpointStrategy": "Checkpoint Strategy",
+    "strategies": {
+      "manual": "Manual Only",
+      "perPrompt": "After Each Prompt",
+      "perToolUse": "After Tool Use",
+      "smart": "Smart (Recommended)"
+    },
+    "strategyDescriptions": {
+      "manual": "Checkpoints will only be created manually",
+      "perPrompt": "A checkpoint will be created after each user prompt",
+      "perToolUse": "A checkpoint will be created after each tool use",
+      "smart": "Checkpoints will be created after destructive operations"
+    },
+    "saveSettings": "Save Settings",
+    "saving": "Saving...",
+    "storageManagement": "Storage Management",
+    "totalCheckpoints": "Total checkpoints",
+    "keepRecentCheckpoints": "Keep Recent Checkpoints",
+    "cleanUp": "Clean Up",
+    "cleanUpDesc": "Remove old checkpoints, keeping only the most recent {count}",
+    "messages": {
+      "settingsSaved": "Settings saved successfully",
+      "checkpointsRemoved": "Removed {count} old checkpoints",
+      "loadSettingsFailed": "Failed to load checkpoint settings",
+      "saveSettingsFailed": "Failed to save checkpoint settings",
+      "cleanupFailed": "Failed to cleanup checkpoints"
+    }
+  },
+  "iconPicker": {
+    "title": "Choose an icon",
+    "searchPlaceholder": "Search icons...",
+    "noResults": "No icons found for \"{{query}}\"",
+    "footer": "Click an icon to select • {{count}} icons available",
+    "categories": {
+      "interface": "Interface & Navigation",
+      "development": "Development & Tech",
+      "business": "Business & Finance",
+      "creative": "Creative & Design",
+      "nature": "Nature & Science",
+      "gaming": "Gaming & Entertainment",
+      "communication": "Communication",
+      "miscellaneous": "Miscellaneous"
+    }
+  },
+  "hooks": {
+    "title": "Hooks Configuration",
+    "events": {
+      "PreToolUse": {
+        "label": "Pre Tool Use",
+        "description": "Runs before tool calls, can block and provide feedback"
+      },
+      "PostToolUse": {
+        "label": "Post Tool Use",
+        "description": "Runs after successful tool completion"
+      },
+      "Notification": {
+        "label": "Notification",
+        "description": "Customizes notifications when Claude needs attention"
+      },
+      "Stop": {
+        "label": "Stop",
+        "description": "Runs when Claude finishes responding"
+      },
+      "SubagentStop": {
+        "label": "Subagent Stop",
+        "description": "Runs when a Claude subagent (Task) finishes"
+      }
+    },
+    "scope": {
+      "project": "Project",
+      "local": "Local",
+      "user": "User"
+    },
+    "buttons": {
+      "save": "Save",
+      "saving": "Saving...",
+      "addMatcher": "Add Matcher",
+      "addCommand": "Add Command",
+      "addHook": "Add Hook",
+      "addAnother": "Add Another",
+      "templates": "Templates"
+    },
+    "placeholders": {
+      "commonPatterns": "Common patterns",
+      "custom": "Custom",
+      "timeout": "60"
+    },
+    "messages": {
+      "loadError": "Failed to load hooks configuration",
+      "saveError": "Failed to save hooks",
+      "description": "Configure shell commands to execute at various points in Claude Code's lifecycle.",
+      "localNote": "These settings are not committed to version control.",
+      "loadingConfiguration": "Loading hooks configuration...",
+      "noHooksConfigured": "No hooks configured for this event"
+    },
+    "templates": {
+      "title": "Hook Templates",
+      "description": "Choose a pre-configured hook template to get started quickly"
+    }
+  },
+  "commands": {
+    "title": "Slash Commands Manager",
+    "slashCommands": "Slash Commands",
+    "projectCommands": "Project Commands",
+    "userCommands": "User Commands",
+    "allCommands": "All Commands",
+    "createProjectCommandsDesc": "Create custom slash commands for this project",
+    "createCommandsDesc": "Create and manage custom slash commands",
+    "createUserCommandsDesc": "Create global slash commands available across all projects",
+    "noCommandsFound": "No commands found matching your search",
+    "noCommands": "No commands yet",
+    "noProjectCommands": "No commands for this project yet",
+    "noUserCommands": "No user commands yet",
+    "createFirstCommand": "Create First Command",
+    "createFirstProjectCommand": "Create First Project Command",
+    "createFirstUserCommand": "Create First User Command",
+    "newCommand": "New Command",
+    "commands": "commands",
+    "form": {
+      "name": "Command Name",
+      "namePlaceholder": "e.g., review, explain, test",
+      "description": "Description",
+      "descriptionPlaceholder": "Brief description of what this command does",
+      "content": "Command Content",
+      "contentPlaceholder": "Enter command content...",
+      "allowedTools": "Allowed Tools",
+      "scope": "Scope",
+      "scopeUser": "User",
+      "scopeProject": "Project",
+      "scopeUserDesc": "Available across all projects",
+      "scopeProjectDesc": "Only available in this project",
+      "commandName": "Command Name*",
+      "commandNamePlaceholder": "e.g., review, fix-issue",
+      "namespace": "Namespace (Optional)",
+      "namespacePlaceholder": "e.g., frontend, backend",
+      "commandContent": "Command Content*",
+      "commandContentPlaceholder": "Enter the prompt content. Use $ARGUMENTS for dynamic values.",
+      "helpText": "Use $ARGUMENTS for user input, @filename for files, and `command` for bash commands",
+      "allowedToolsHelp": "Select which tools Claude can use with this command",
+      "examples": "Examples"
+    },
+    "buttons": {
+      "save": "Save",
+      "saving": "Saving...",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleting": "Deleting...",
+      "edit": "Edit",
+      "create": "Create Command",
+      "examples": "Examples"
+    },
+    "badges": {
+      "arguments": "Arguments",
+      "bash": "Bash",
+      "files": "Files"
+    },
+    "messages": {
+      "loadError": "Failed to load commands",
+      "saveError": "Failed to save command",
+      "deleteError": "Failed to delete command",
+      "confirmDelete": "Are you sure you want to delete the command \"{{name}}\"? This action cannot be undone."
+    }
+  },
+  "projectSettings": {
+    "title": "Project Settings",
+    "back": "Back",
+    "tabs": {
+      "slashCommands": "Slash Commands",
+      "projectHooks": "Project Hooks",
+      "localHooks": "Local Hooks"
+    },
+    "slashCommands": {
+      "title": "Project Slash Commands",
+      "description": "Custom commands that are specific to this project. These commands are stored in",
+      "versionControl": "and can be committed to version control."
+    },
+    "projectHooks": {
+      "title": "Project Hooks",
+      "description": "These hooks apply to all users working on this project. They are stored in",
+      "versionControl": "and should be committed to version control."
+    },
+    "localHooks": {
+      "title": "Local Hooks",
+      "description": "These hooks only apply to your machine. They are stored in",
+      "versionControl": "and should NOT be committed to version control.",
+      "gitIgnoreWarning": "It's recommended to add .claude/settings.local.json to .gitignore to avoid accidentally committing local settings.",
+      "addToGitIgnore": "Add to .gitignore"
+    }
+  }
+}

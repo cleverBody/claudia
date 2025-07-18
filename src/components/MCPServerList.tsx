@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "@/hooks/useTranslation";
 import { api, type MCPServer } from "@/lib/api";
 
 interface MCPServerListProps {
@@ -49,6 +50,7 @@ export const MCPServerList: React.FC<MCPServerListProps> = ({
   onServerRemoved,
   onRefresh,
 }) => {
+  const { t } = useTranslation();
   const [removingServer, setRemovingServer] = useState<string | null>(null);
   const [testingServer, setTestingServer] = useState<string | null>(null);
   const [expandedServers, setExpandedServers] = useState<Set<string>>(new Set());
@@ -357,9 +359,9 @@ export const MCPServerList: React.FC<MCPServerListProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-base font-semibold">Configured Servers</h3>
+          <h3 className="text-base font-semibold">{t("mcp.configuredServers")}</h3>
           <p className="text-sm text-muted-foreground">
-            {servers.length} server{servers.length !== 1 ? "s" : ""} configured
+            {t("mcp.serversConfigured", { count: servers.length })}
           </p>
         </div>
         <Button
@@ -369,7 +371,7 @@ export const MCPServerList: React.FC<MCPServerListProps> = ({
           className="gap-2 hover:bg-primary/10 hover:text-primary hover:border-primary/50"
         >
           <RefreshCw className="h-4 w-4" />
-          Refresh
+          {t("mcp.refresh")}
         </Button>
       </div>
 
@@ -379,9 +381,9 @@ export const MCPServerList: React.FC<MCPServerListProps> = ({
           <div className="p-4 bg-primary/10 rounded-full mb-4">
             <Network className="h-12 w-12 text-primary" />
           </div>
-          <p className="text-muted-foreground mb-2 font-medium">No MCP servers configured</p>
+          <p className="text-muted-foreground mb-2 font-medium">{t("mcp.noServers")}</p>
           <p className="text-sm text-muted-foreground">
-            Add a server to get started with Model Context Protocol
+            {t("mcp.noServersDescription")}
           </p>
         </div>
       ) : (

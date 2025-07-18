@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { openUrl } from "@tauri-apps/plugin-opener";
 import asteriskLogo from "@/assets/nfo/asterisk-logo.png";
 import keygennMusic from "@/assets/nfo/claudia-nfo.ogg";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface NFOCreditsProps {
   /**
@@ -22,6 +23,7 @@ interface NFOCreditsProps {
  * <NFOCredits onClose={() => setShowNFO(false)} />
  */
 export const NFOCredits: React.FC<NFOCreditsProps> = ({ onClose }) => {
+  const { t } = useTranslation();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [isMuted, setIsMuted] = useState(false);
@@ -84,18 +86,18 @@ export const NFOCredits: React.FC<NFOCreditsProps> = ({ onClose }) => {
   
   // Credits content
   const creditsContent = [
-    { type: "header", text: "CLAUDIA v0.1.0" },
-    { type: "subheader", text: "[ A STRATEGIC PROJECT BY ASTERISK ]" },
+    { type: "header", text: t("about.title") },
+    { type: "subheader", text: t("about.subtitle") },
     { type: "spacer" },
-    { type: "section", title: "━━━ CREDITS ━━━" },
-    { type: "credit", role: "POWERED BY", name: "Anthropic Claude 4" },
-    { type: "credit", role: "CLAUDE CODE", name: "The Ultimate Coding Assistant" },
-    { type: "credit", role: "MCP PROTOCOL", name: "Model Context Protocol" },
+    { type: "section", title: t("about.sections.credits") },
+    { type: "credit", role: t("about.credits.poweredBy"), name: t("about.names.anthropicClaude") },
+    { type: "credit", role: t("about.credits.claudeCode"), name: t("about.names.ultimateCodingAssistant") },
+    { type: "credit", role: t("about.credits.mcpProtocol"), name: t("about.names.modelContextProtocol") },
     { type: "spacer" },
-    { type: "section", title: "━━━ DEPENDENCIES ━━━" },
-    { type: "credit", role: "RUNTIME", name: "Tauri Framework" },
-    { type: "credit", role: "UI FRAMEWORK", name: "React + TypeScript" },
-    { type: "credit", role: "STYLING", name: "Tailwind CSS + shadcn/ui" },
+    { type: "section", title: t("about.sections.dependencies") },
+    { type: "credit", role: t("about.credits.runtime"), name: t("about.names.tauriFramework") },
+    { type: "credit", role: t("about.credits.uiFramework"), name: t("about.names.reactTypeScript") },
+    { type: "credit", role: t("about.credits.styling"), name: t("about.names.tailwindShadcn") },
     { type: "credit", role: "ANIMATIONS", name: "Framer Motion" },
     { type: "credit", role: "BUILD TOOL", name: "Vite" },
     { type: "credit", role: "PACKAGE MANAGER", name: "Bun" },

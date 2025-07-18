@@ -1,31 +1,35 @@
 @import "tailwindcss";
 
-/* Dark theme configuration */
+/* Fresh Modern Theme Configuration - 清新现代主题配置 */
 @theme {
-  /* Colors */
-  --color-background: oklch(0.12 0.01 240);
-  --color-foreground: oklch(0.98 0.01 240);
-  --color-card: oklch(0.14 0.01 240);
-  --color-card-foreground: oklch(0.98 0.01 240);
-  --color-popover: oklch(0.12 0.01 240);
-  --color-popover-foreground: oklch(0.98 0.01 240);
-  --color-primary: oklch(0.98 0.01 240);
-  --color-primary-foreground: oklch(0.17 0.01 240);
-  --color-secondary: oklch(0.16 0.01 240);
-  --color-secondary-foreground: oklch(0.98 0.01 240);
-  --color-muted: oklch(0.16 0.01 240);
-  --color-muted-foreground: oklch(0.68 0.01 240);
-  --color-accent: oklch(0.16 0.01 240);
-  --color-accent-foreground: oklch(0.98 0.01 240);
-  --color-destructive: oklch(0.6 0.2 25);
-  --color-destructive-foreground: oklch(0.98 0.01 240);
-  --color-border: oklch(0.16 0.01 240);
-  --color-input: oklch(0.16 0.01 240);
-  --color-ring: oklch(0.52 0.015 240);
+  /* Colors - Fresh Mint-Green Palette 薄荷绿配色方案 */
+  --color-background: oklch(0.98 0.003 150);
+  --color-foreground: oklch(0.12 0.01 210);
+  --color-card: oklch(0.99 0.002 150);
+  --color-card-foreground: oklch(0.12 0.01 210);
+  --color-popover: oklch(0.99 0.002 150);
+  --color-popover-foreground: oklch(0.12 0.01 210);
+  --color-primary: oklch(0.58 0.18 165);
+  --color-primary-foreground: oklch(0.99 0.01 165);
+  --color-secondary: oklch(0.95 0.008 150);
+  --color-secondary-foreground: oklch(0.22 0.01 210);
+  --color-muted: oklch(0.96 0.005 150);
+  --color-muted-foreground: oklch(0.48 0.01 210);
+  --color-accent: oklch(0.68 0.15 140);
+  --color-accent-foreground: oklch(0.99 0.01 140);
+  --color-destructive: oklch(0.68 0.18 12);
+  --color-destructive-foreground: oklch(0.99 0.01 12);
+  --color-border: oklch(0.90 0.008 150);
+  --color-input: oklch(0.99 0.002 150);
+  --color-ring: oklch(0.58 0.18 165);
   
   /* Additional colors for status messages */
-  --color-green-500: oklch(0.72 0.20 142);
-  --color-green-600: oklch(0.64 0.22 142);
+  --color-green-500: oklch(0.68 0.18 145);
+  --color-green-600: oklch(0.58 0.20 145);
+  --color-blue-500: oklch(0.62 0.15 200);
+  --color-blue-600: oklch(0.52 0.18 200);
+  --color-amber-500: oklch(0.75 0.15 80);
+  --color-amber-600: oklch(0.65 0.18 80);
 
   /* Border radius */
   --radius-sm: 0.25rem;
@@ -49,9 +53,12 @@
 }
 
 body {
-  background-color: var(--color-background);
+  background: linear-gradient(135deg, var(--color-background) 0%, oklch(0.985 0.005 160) 100%);
   color: var(--color-foreground);
   font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-size: 14px;
 }
 
 /* Placeholder text styling */
@@ -126,14 +133,40 @@ button:focus-visible,
 /* Custom utilities */
 @utility animate-in {
   animation-name: enter;
-  animation-duration: 150ms;
+  animation-duration: 200ms;
   animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @utility animate-out {
   animation-name: exit;
-  animation-duration: 150ms;
+  animation-duration: 200ms;
   animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fresh card styling - 清新卡片样式 */
+.card-fresh {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+}
+
+.card-fresh:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06), 0 3px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px) scale(1.01);
+  border-color: var(--color-primary);
+}
+
+/* Modern glass effect - 现代玻璃效果 */
+.glass-effect {
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
 }
 
 @utility line-clamp-2 {

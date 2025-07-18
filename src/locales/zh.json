@@ -1,0 +1,781 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "确认",
+    "back": "返回",
+    "next": "下一步",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "close": "关闭",
+    "open": "打开",
+    "refresh": "刷新",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "clear": "清除",
+    "reset": "重置",
+    "submit": "提交",
+    "apply": "应用",
+    "remove": "移除",
+    "add": "添加",
+    "update": "更新",
+    "view": "查看",
+    "download": "下载",
+    "upload": "上传",
+    "copy": "复制",
+    "paste": "粘贴",
+    "cut": "剪切",
+    "undo": "撤销",
+    "redo": "重做",
+    "select": "选择",
+    "selectAll": "全选",
+    "deselect": "取消选择",
+    "expand": "展开",
+    "collapse": "收起",
+    "maximize": "最大化",
+    "minimize": "最小化",
+    "fullscreen": "全屏",
+    "exitFullscreen": "退出全屏",
+    "previous": "上一页",
+    "pageInfo": "第 {{current}} 页 共 {{total}} 页",
+    "deleting": "删除中...",
+    "saving": "保存中...",
+    "language": "语言"
+  },
+  "navigation": {
+    "welcome": {
+      "title": "欢迎使用 Claudia",
+      "subtitle": "Claude Code 会话浏览器"
+    },
+    "projects": {
+      "title": "CC 项目",
+      "subtitle": "浏览您的 Claude Code 会话"
+    },
+    "agents": {
+      "title": "CC 智能代理",
+      "subtitle": "管理您的智能代理"
+    },
+    "settings": {
+      "title": "设置",
+      "subtitle": "配置应用程序设置"
+    },
+    "usage": {
+      "title": "使用情况",
+      "subtitle": "查看使用统计"
+    },
+    "mcp": {
+      "title": "MCP",
+      "subtitle": "模型上下文协议管理"
+    },
+    "backToHome": "返回首页",
+    "goBack": "返回",
+    "goForward": "前进",
+    "about": "关于"
+  },
+  "projects": {
+    "list": {
+      "title": "项目列表",
+      "empty": "在 ~/.claude/projects 中未找到项目",
+      "loadError": "加载项目失败。请确保 ~/.claude 目录存在。",
+      "noProjects": "暂无项目"
+    },
+    "session": {
+      "new": "新建 Claude Code 会话",
+      "running": "运行中的会话",
+      "loadError": "加载该项目的会话失败。",
+      "create": "创建会话",
+      "open": "打开会话",
+      "delete": "删除会话",
+      "rename": "重命名会话"
+    },
+    "actions": {
+      "createProject": "创建项目",
+      "deleteProject": "删除项目",
+      "openProject": "打开项目",
+      "projectSettings": "项目设置"
+    }
+  },
+  "sessions": {
+    "list": {
+      "title": "会话列表",
+      "empty": "暂无会话",
+      "loadError": "加载会话失败"
+    },
+    "actions": {
+      "newSession": "新建会话",
+      "openSession": "打开会话",
+      "deleteSession": "删除会话",
+      "renameSession": "重命名会话",
+      "leaveActiveSession": "Claude 仍在响应中。如果您现在离开，Claude 将继续在后台运行。\n\n您可以从项目视图返回此会话。\n\n您想要继续吗？"
+    },
+    "status": {
+      "running": "运行中",
+      "stopped": "已停止",
+      "error": "错误",
+      "completed": "已完成"
+    },
+    "firstMessage": "首条消息",
+    "hasTodos": "有待办事项"
+  },
+
+  "agents": {
+    "title": "智能代理",
+    "list": {
+      "title": "代理列表",
+      "empty": "暂无代理",
+      "loadError": "加载代理失败",
+      "createFirst": "创建您的第一个 CC 代理来开始使用"
+    },
+    "actions": {
+      "createAgent": "创建代理",
+      "editAgent": "编辑代理",
+      "deleteAgent": "删除代理",
+      "runAgent": "运行代理",
+      "stopAgent": "停止代理",
+      "exportSuccess": "代理导出成功",
+      "importSuccess": "从 GitHub 成功导入代理"
+    },
+    "status": {
+      "idle": "空闲",
+      "running": "运行中",
+      "completed": "已完成",
+      "error": "错误",
+      "stopped": "已停止"
+    },
+    "recentExecutions": "最近执行"
+  },
+  "errors": {
+    "system": {
+      "fileNotFound": "文件未找到",
+      "networkError": "网络连接错误",
+      "permissionDenied": "权限不足",
+      "unknownError": "未知错误"
+    },
+    "validation": {
+      "required": "此字段为必填项",
+      "invalidFormat": "格式无效",
+      "tooShort": "内容过短",
+      "tooLong": "内容过长",
+      "invalidEmail": "邮箱格式无效",
+      "invalidUrl": "URL 格式无效"
+    },
+    "user": {
+      "permissionDenied": "权限不足",
+      "operationFailed": "操作失败",
+      "sessionExpired": "会话已过期"
+    },
+    "loading": {
+      "projectsFailed": "加载项目失败",
+      "sessionsFailed": "加载会话失败",
+      "agentsFailed": "加载代理失败",
+      "settingsFailed": "加载设置失败"
+    }
+  },
+  "actions": {
+    "import": "导入",
+    "fromFile": "从文件",
+    "fromGitHub": "从 GitHub",
+    "export": "导出",
+    "confirm": {
+      "delete": "确认删除？",
+      "clear": "确认清除？",
+      "reset": "确认重置？",
+      "logout": "确认退出？",
+      "exit": "确认退出？",
+      "deleteAgent": "您确定要删除代理 \"{{name}}\" 吗？此操作无法撤销，将永久删除该代理及其所有相关数据。"
+    },
+    "success": {
+      "saved": "保存成功",
+      "deleted": "删除成功",
+      "created": "创建成功",
+      "updated": "更新成功",
+      "copied": "复制成功"
+    },
+    "buttons": {
+      "tryAgain": "重试",
+      "learnMore": "了解更多",
+      "getStarted": "开始使用",
+      "continue": "继续",
+      "finish": "完成",
+      "skip": "跳过"
+    },
+    "common": {
+      "previous": "上一页",
+      "next": "下一页",
+      "pageInfo": "第 {{current}} 页 共 {{total}} 页",
+      "deleting": "删除中...",
+      "saving": "保存中..."
+    }
+  },
+  "execution": {
+    "labels": {
+      "task": "任务",
+      "model": "模型",
+      "projectPath": "项目路径"
+    },
+    "placeholders": {
+      "enterTask": "输入代理任务",
+      "selectProjectPath": "选择或输入项目路径"
+    },
+    "buttons": {
+      "execute": "执行",
+      "stop": "停止",
+      "fullscreen": "全屏",
+      "close": "关闭",
+      "copyOutput": "复制输出",
+      "copyAsJsonl": "复制为 JSONL",
+      "copyAsMarkdown": "复制为 Markdown",
+      "hooks": "钩子",
+      "selectPath": "选择项目目录"
+    },
+    "status": {
+      "readyToExecute": "准备执行",
+      "readyToExecuteDesc": "选择项目路径并输入任务来运行代理",
+      "initializingAgent": "初始化代理中...",
+      "executionStopped": "执行已被用户停止",
+      "executionFailed": "代理执行失败",
+      "executionCancelled": "代理执行已取消"
+    },
+    "models": {
+      "sonnet": "Claude 4 Sonnet",
+      "opus": "Claude 4 Opus"
+    },
+    "dialogs": {
+      "leaveRunning": "代理正在运行中。如果您现在离开，代理将继续在后台运行。您可以在 CC 代理的\"运行中的会话\"标签中查看运行中的会话。\\n\\n您想要继续吗？",
+      "hooksTitle": "钩子配置",
+      "hooksDescription": "为此项目配置钩子设置",
+      "projectSettings": "项目设置",
+      "localSettings": "本地设置",
+      "projectHooksDesc": "项目钩子存储在 .claude/settings.json 中，并提交到版本控制。",
+      "localHooksDesc": "本地钩子存储在 .claude/settings.local.json 中，不提交到版本控制。"
+    },
+    "errors": {
+      "noRunId": "没有可用的运行 ID 来停止",
+      "failedToExecute": "执行代理失败：{{error}}",
+      "failedToStop": "停止执行失败：{{error}}",
+      "unknownError": "未知错误"
+    }
+  },
+  "fileEditor": {
+    "buttons": {
+      "save": "保存",
+      "saving": "保存中..."
+    },
+    "status": {
+      "loading": "加载中...",
+      "saved": "文件保存成功",
+      "error": "保存文件时出错"
+    }
+  },
+  "about": {
+    "title": "CLAUDIA v0.1.0",
+    "subtitle": "[ ASTERISK 战略项目 ]",
+    "sections": {
+      "credits": "━━━ 致谢 ━━━",
+      "dependencies": "━━━ 依赖项 ━━━"
+    },
+    "credits": {
+      "poweredBy": "技术支持",
+      "claudeCode": "CLAUDE CODE",
+      "mcpProtocol": "MCP 协议",
+      "runtime": "运行时",
+      "uiFramework": "UI 框架",
+      "styling": "样式"
+    },
+    "names": {
+      "anthropicClaude": "Anthropic Claude 4",
+      "ultimateCodingAssistant": "终极编程助手",
+      "modelContextProtocol": "模型上下文协议",
+      "tauriFramework": "Tauri 框架",
+      "reactTypeScript": "React + TypeScript",
+      "tailwindShadcn": "Tailwind CSS + shadcn/ui"
+    }
+  },
+  "tools": {
+    "common": {
+      "expand": "展开",
+      "collapse": "收起",
+      "fileContent": "文件内容",
+      "clickExpandToView": "点击\"展开\"查看完整文件",
+      "searchFailed": "搜索失败",
+      "noMatchesFound": "未找到匹配项",
+      "commandFailed": "命令失败",
+      "commandCompleted": "命令完成",
+      "truncatedToChars": "截断到 1000 字符"
+    },
+    "todo": {
+      "searchPlaceholder": "搜索待办事项...",
+      "all": "全部",
+      "pending": "待处理",
+      "inProgress": "进行中",
+      "completed": "已完成",
+      "cancelled": "已取消",
+      "noTodosMatch": "没有待办事项匹配您的筛选条件",
+      "noTodosAvailable": "暂无待办事项",
+      "exportJson": "导出 JSON",
+      "exportMarkdown": "导出 Markdown",
+      "list": "列表",
+      "board": "看板",
+      "timeline": "时间线",
+      "stats": "统计"
+    }
+  },
+  "settings": {
+    "title": "设置",
+    "subtitle": "配置应用程序设置",
+    "saveSettings": "保存设置",
+    "general": {
+      "title": "常规",
+      "generalSettings": "常规设置",
+      "includeCoAuthoredBy": "包含共同作者",
+      "includeCoAuthoredByDesc": "在提交信息中包含共同作者信息",
+      "verboseOutput": "详细输出",
+      "verboseOutputDesc": "显示详细的调试信息",
+      "cleanupPeriod": "清理周期（天）",
+      "cleanupPeriodDesc": "自动清理旧文件的天数",
+      "claudeInstallation": "Claude 安装",
+      "claudeInstallationDesc": "配置 Claude Code 二进制文件路径",
+      "binaryPathChanged": "二进制路径已更改，需要重启应用程序"
+    },
+    "permissions": {
+      "title": "权限",
+      "description": "控制 Claude Code 可以使用哪些工具而无需手动批准",
+      "allowRules": "允许规则",
+      "denyRules": "拒绝规则",
+      "addRule": "添加规则",
+      "removeRule": "删除规则",
+      "noAllowRules": "未配置允许规则。Claude 将会对所有工具请求批准。",
+      "noDenyRules": "未配置拒绝规则。",
+      "allowRulePlaceholder": "例如：Bash(npm run test:*)",
+      "denyRulePlaceholder": "例如：Bash(curl:*)",
+      "examples": "示例",
+      "exampleBash": "允许所有 bash 命令",
+      "exampleExact": "允许精确命令",
+      "examplePrefix": "允许带前缀的命令",
+      "exampleRead": "允许读取特定文件",
+      "exampleEdit": "允许编辑 docs 目录中的文件"
+    },
+    "environment": {
+      "title": "环境变量",
+      "description": "应用于每个 Claude Code 会话的环境变量",
+      "addVariable": "添加变量",
+      "keyPlaceholder": "KEY",
+      "valuePlaceholder": "value",
+      "noVariables": "未配置环境变量。",
+      "commonVariables": "常用变量",
+      "telemetryDesc": "启用/禁用遥测 (0 或 1)",
+      "modelDesc": "自定义模型名称",
+      "costWarningsDesc": "禁用成本警告 (1)"
+    },
+    "advanced": {
+      "title": "高级设置",
+      "description": "高级用户的附加配置选项",
+      "apiKeyHelper": "API 密钥助手脚本",
+      "apiKeyHelperDesc": "用于生成 API 请求认证值的自定义脚本",
+      "apiKeyHelperPlaceholder": "/path/to/generate_api_key.sh",
+      "rawJsonDescription": "这显示将保存到 ~/.claude/settings.json 的原始 JSON",
+      "rawSettingsJson": "原始设置 (JSON)"
+    },
+    "hooks": {
+      "title": "钩子",
+      "userHooks": "用户钩子",
+      "userHooksDesc": "配置适用于您用户账户的所有 Claude Code 会话的钩子。这些存储在"
+    },
+    "commands": {
+      "title": "命令"
+    },
+    "storage": {
+      "title": "存储",
+      "databaseStorage": "数据库存储",
+      "searchPlaceholder": "搜索表格...",
+      "buttons": {
+        "sqlQuery": "SQL 查询",
+        "resetDb": "重置数据库",
+        "newRow": "新建行"
+      },
+      "dialogs": {
+        "newRow": {
+          "title": "新建行",
+          "description": "向 {table} 表添加新行。"
+        },
+        "sqlEditor": {
+          "title": "SQL 查询编辑器",
+          "description": "在数据库上执行原始 SQL 查询。请谨慎使用。",
+          "queryLabel": "SQL 查询"
+        }
+      }
+    },
+    "claude": {
+      "notFound": "未找到 Claude",
+      "selectPath": "选择路径",
+      "install": "安装 Claude Code",
+      "loadError": "加载 Claude 安装失败",
+      "selectInstallation": "选择 Claude 安装",
+      "versionUnknown": "版本未知",
+      "recommended": "推荐",
+      "system": "系统",
+      "custom": "自定义",
+      "saveSelection": "保存选择",
+      "multipleInstallationsFound": "在您的系统上找到了多个 Claude Code 安装。请选择您想要使用的版本。",
+      "notFoundMessage": "在常见安装位置未找到 Claude Code。请安装 Claude Code 以继续。",
+      "searchedLocations": "搜索位置",
+      "tip": "提示",
+      "installTip": "您可以使用以下命令安装 Claude Code",
+      "installationGuide": "安装指南",
+      "validating": "验证中...",
+      "noInstallationsFound": "未找到安装",
+      "installationTitle": "Claude Code 安装",
+      "loadingInstallations": "正在加载可用安装...",
+      "errorLoadingInstallations": "加载安装时出错",
+      "installationDescription": "选择您首选的 Claude Code 安装。建议使用捆绑版本以获得最佳兼容性。",
+      "availableInstallations": "可用安装",
+      "selectedInstallation": "选定的安装"
+    },
+    "messages": {
+      "saveSuccess": "设置保存成功！",
+      "saveError": "保存设置失败",
+      "unsavedChanges": "您有未保存的更改。确定要离开吗？"
+    }
+  },
+  "createAgent": {
+    "title": {
+      "create": "创建 CC 代理",
+      "edit": "编辑 CC 代理"
+    },
+    "subtitle": {
+      "create": "创建一个新的 Claude Code 代理",
+      "edit": "更新您的 Claude Code 代理"
+    },
+    "form": {
+      "basicInformation": "基本信息",
+      "agentName": "代理名称",
+      "agentNamePlaceholder": "例如：代码助手",
+      "agentNameRequired": "代理名称是必需的",
+      "agentIcon": "代理图标",
+      "model": "模型",
+      "models": {
+        "sonnet": {
+          "name": "Claude 4 Sonnet",
+          "description": "更快，适用于大多数任务"
+        },
+        "opus": {
+          "name": "Claude 4 Opus",
+          "description": "更强大，适用于复杂任务"
+        }
+      },
+      "defaultTask": "默认任务（可选）",
+      "defaultTaskPlaceholder": "例如：检查此代码的安全问题",
+      "defaultTaskDescription": "这将用作执行代理时的默认任务占位符",
+      "systemPrompt": "系统提示",
+      "systemPromptDescription": "定义您的 CC 代理的行为和能力",
+      "systemPromptRequired": "系统提示是必需的"
+    },
+    "buttons": {
+      "save": "保存",
+      "saving": "保存中..."
+    },
+    "messages": {
+      "createError": "创建代理失败",
+      "updateError": "更新代理失败",
+      "unsavedChanges": "您有未保存的更改。确定要离开吗？"
+    }
+  },
+  "mcp": {
+    "title": "MCP 服务器",
+    "description": "管理模型上下文协议服务器",
+    "configuredServers": "已配置的服务器",
+    "serversConfigured": "{{count}} 个服务器已配置",
+    "refresh": "刷新",
+    "noServers": "未配置 MCP 服务器",
+    "noServersDescription": "添加服务器以开始使用模型上下文协议",
+    "tabs": {
+      "servers": "服务器",
+      "add": "添加",
+      "import": "导入"
+    },
+    "messages": {
+      "serverAdded": "MCP 服务器添加成功！",
+      "serverRemoved": "服务器 \"{{name}}\" 删除成功！",
+      "importSuccess": "成功导入 {{count}} 个服务器！",
+      "importPartial": "导入了 {{imported}} 个服务器，{{failed}} 个失败",
+      "importError": "导入失败",
+      "loadError": "加载 MCP 服务器失败。请确保 Claude Code 已安装。"
+    }
+  },
+  "usage": {
+    "title": "使用情况仪表板",
+    "dateRanges": {
+      "all": "全部时间",
+      "7d": "最近 7 天",
+      "30d": "最近 30 天"
+    },
+    "tabs": {
+      "overview": "概览",
+      "models": "按模型",
+      "projects": "按项目",
+      "sessions": "按会话",
+      "timeline": "时间线"
+    },
+    "stats": {
+      "totalCost": "总费用",
+      "totalTokens": "总令牌数",
+      "totalSessions": "总会话数",
+      "avgCostPerSession": "每会话平均费用",
+      "inputTokens": "输入令牌",
+      "outputTokens": "输出令牌",
+      "cacheWrite": "缓存写入",
+      "cacheRead": "缓存读取"
+    },
+    "tokenBreakdown": "令牌分解",
+    "mostUsedModels": "最常用模型",
+    "topProjects": "热门项目",
+    "usageByModel": "按模型使用情况",
+    "usageByProject": "按项目使用情况",
+    "usageBySession": "按会话使用情况",
+    "dailyUsage": "每日使用情况",
+    "dailyUsageOverTime": "每日使用情况趋势",
+    "buttons": {
+      "tryAgain": "重试"
+    },
+    "loading": "加载使用统计中...",
+    "error": "加载使用统计失败"
+  },
+  "github": {
+    "title": "GitHub 代理浏览器",
+    "search": {
+      "placeholder": "搜索代理...",
+      "noResults": "没有找到匹配的代理",
+      "noAgents": "暂无可用代理"
+    },
+    "buttons": {
+      "tryAgain": "重试",
+      "import": "导入",
+      "close": "关闭",
+      "viewDetails": "查看详情",
+      "cancel": "取消"
+    },
+    "status": {
+      "imported": "已导入",
+      "importing": "导入中..."
+    },
+    "repositoryInfo": "代理来源于",
+    "contributeInfo": "您可以向仓库贡献您的自定义代理！",
+    "systemPrompt": "系统提示",
+    "defaultTask": "默认任务",
+    "messages": {
+      "loadError": "加载代理详情失败",
+      "importError": "导入代理失败：{{error}}",
+      "importSuccess": "代理导入成功",
+      "fetchError": "从 GitHub 获取代理失败。请检查您的网络连接。"
+    }
+  },
+  "storage": {
+    "buttons": {
+      "sqlQuery": "SQL 查询",
+      "resetDb": "重置数据库",
+      "newRow": "新建行"
+    },
+    "searchPlaceholder": "搜索表格..."
+  },
+  "checkpoint": {
+    "title": "检查点设置",
+    "close": "关闭",
+    "experimentalFeature": "实验性功能",
+    "experimentalWarning": "检查点功能可能会影响目录结构或导致数据丢失。请谨慎使用。",
+    "automaticCheckpoints": "自动检查点",
+    "automaticCheckpointsDesc": "根据选定的策略自动创建检查点",
+    "checkpointStrategy": "检查点策略",
+    "strategies": {
+      "manual": "仅手动",
+      "perPrompt": "每次提示后",
+      "perToolUse": "工具使用后",
+      "smart": "智能（推荐）"
+    },
+    "strategyDescriptions": {
+      "manual": "检查点将仅手动创建",
+      "perPrompt": "每次用户提示后将创建检查点",
+      "perToolUse": "每次工具使用后将创建检查点",
+      "smart": "在破坏性操作后将创建检查点"
+    },
+    "saveSettings": "保存设置",
+    "saving": "保存中...",
+    "storageManagement": "存储管理",
+    "totalCheckpoints": "总检查点数",
+    "keepRecentCheckpoints": "保留最近的检查点",
+    "cleanUp": "清理",
+    "cleanUpDesc": "删除旧检查点，仅保留最近的 {count} 个",
+    "messages": {
+      "settingsSaved": "设置保存成功",
+      "checkpointsRemoved": "已删除 {count} 个旧检查点",
+      "loadSettingsFailed": "加载检查点设置失败",
+      "saveSettingsFailed": "保存检查点设置失败",
+      "cleanupFailed": "清理检查点失败"
+    }
+  },
+  "iconPicker": {
+    "title": "选择图标",
+    "searchPlaceholder": "搜索图标...",
+    "noResults": "未找到 \"{{query}}\" 的图标",
+    "footer": "点击图标选择 • {{count}} 个图标可用",
+    "categories": {
+      "interface": "界面与导航",
+      "development": "开发与技术",
+      "business": "商务与金融",
+      "creative": "创意与设计",
+      "nature": "自然与科学",
+      "gaming": "游戏与娱乐",
+      "communication": "通讯",
+      "miscellaneous": "其他"
+    }
+  },
+  "hooks": {
+    "title": "钩子配置",
+    "events": {
+      "PreToolUse": {
+        "label": "工具使用前",
+        "description": "在工具调用前运行，可以阻止并提供反馈"
+      },
+      "PostToolUse": {
+        "label": "工具使用后",
+        "description": "在工具成功完成后运行"
+      },
+      "Notification": {
+        "label": "通知",
+        "description": "当 Claude 需要注意时自定义通知"
+      },
+      "Stop": {
+        "label": "停止",
+        "description": "当 Claude 完成响应时运行"
+      },
+      "SubagentStop": {
+        "label": "子代理停止",
+        "description": "当 Claude 子代理（任务）完成时运行"
+      }
+    },
+    "scope": {
+      "project": "项目",
+      "local": "本地",
+      "user": "用户"
+    },
+    "buttons": {
+      "save": "保存",
+      "saving": "保存中...",
+      "addMatcher": "添加匹配器",
+      "addCommand": "添加命令",
+      "addHook": "添加钩子",
+      "addAnother": "添加另一个",
+      "templates": "模板"
+    },
+    "placeholders": {
+      "commonPatterns": "常用模式",
+      "custom": "自定义",
+      "timeout": "60"
+    },
+    "messages": {
+      "loadError": "加载钩子配置失败",
+      "saveError": "保存钩子失败",
+      "description": "配置在 Claude Code 生命周期各个阶段执行的 shell 命令。",
+      "localNote": "这些设置不会提交到版本控制。",
+      "loadingConfiguration": "正在加载钩子配置...",
+      "noHooksConfigured": "此事件未配置钩子"
+    },
+    "templates": {
+      "title": "钩子模板",
+      "description": "选择预配置的钩子模板以快速开始"
+    }
+  },
+  "commands": {
+    "title": "斜杠命令管理器",
+    "slashCommands": "斜杠命令",
+    "projectCommands": "项目命令",
+    "userCommands": "用户命令",
+    "allCommands": "所有命令",
+    "createProjectCommandsDesc": "为此项目创建自定义斜杠命令",
+    "createCommandsDesc": "创建和管理自定义斜杠命令",
+    "createUserCommandsDesc": "创建在所有项目中可用的全局斜杠命令",
+    "noCommandsFound": "未找到匹配的命令",
+    "noCommands": "暂无命令",
+    "noProjectCommands": "此项目暂无命令",
+    "noUserCommands": "暂无用户命令",
+    "createFirstCommand": "创建第一个命令",
+    "createFirstProjectCommand": "创建第一个项目命令",
+    "createFirstUserCommand": "创建第一个用户命令",
+    "newCommand": "新建命令",
+    "commands": "命令",
+    "form": {
+      "name": "命令名称",
+      "namePlaceholder": "例如：review, explain, test",
+      "description": "描述",
+      "descriptionPlaceholder": "简要描述此命令的功能",
+      "content": "命令内容",
+      "contentPlaceholder": "输入命令内容...",
+      "allowedTools": "允许的工具",
+      "scope": "作用域",
+      "scopeUser": "用户",
+      "scopeProject": "项目",
+      "scopeUserDesc": "在所有项目中可用",
+      "scopeProjectDesc": "仅在此项目中可用",
+      "commandName": "命令名称*",
+      "commandNamePlaceholder": "例如：review, fix-issue",
+      "namespace": "命名空间（可选）",
+      "namespacePlaceholder": "例如：frontend, backend",
+      "commandContent": "命令内容*",
+      "commandContentPlaceholder": "输入提示内容。使用 $ARGUMENTS 表示动态值。",
+      "helpText": "使用 $ARGUMENTS 表示用户输入，@filename 表示文件，`command` 表示 bash 命令",
+      "allowedToolsHelp": "选择 Claude 可以与此命令一起使用的工具",
+      "examples": "示例"
+    },
+    "buttons": {
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "取消",
+      "delete": "删除",
+      "deleting": "删除中...",
+      "edit": "编辑",
+      "create": "创建命令",
+      "examples": "示例"
+    },
+    "badges": {
+      "arguments": "参数",
+      "bash": "Bash",
+      "files": "文件"
+    },
+    "messages": {
+      "loadError": "加载命令失败",
+      "saveError": "保存命令失败",
+      "deleteError": "删除命令失败",
+      "confirmDelete": "确定要删除命令 \"{{name}}\" 吗？此操作无法撤销。"
+    }
+  },
+  "projectSettings": {
+    "title": "项目设置",
+    "back": "返回",
+    "tabs": {
+      "slashCommands": "斜杠命令",
+      "projectHooks": "项目钩子",
+      "localHooks": "本地钩子"
+    },
+    "slashCommands": {
+      "title": "项目斜杠命令",
+      "description": "特定于此项目的自定义命令。这些命令存储在",
+      "versionControl": "并且可以提交到版本控制。"
+    },
+    "projectHooks": {
+      "title": "项目钩子",
+      "description": "这些钩子适用于在此项目上工作的所有用户。它们存储在",
+      "versionControl": "并且应该提交到版本控制。"
+    },
+    "localHooks": {
+      "title": "本地钩子",
+      "description": "这些钩子仅适用于您的机器。它们存储在",
+      "versionControl": "并且不应该提交到版本控制。",
+      "gitIgnoreWarning": "建议将 .claude/settings.local.json 添加到 .gitignore 以避免意外提交本地设置。",
+      "addToGitIgnore": "添加到 .gitignore"
+    }
+  }
+}

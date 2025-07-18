@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ExternalLink, FileQuestion, Terminal, AlertCircle, Loader2 } from "lucide-react";
 import { ClaudeVersionSelector } from "./ClaudeVersionSelector";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface ClaudeBinaryDialogProps {
   open: boolean;
@@ -13,6 +14,7 @@ interface ClaudeBinaryDialogProps {
 }
 
 export function ClaudeBinaryDialog({ open, onOpenChange, onSuccess, onError }: ClaudeBinaryDialogProps) {
+  const { t } = useTranslation();
   const [selectedInstallation, setSelectedInstallation] = useState<ClaudeInstallation | null>(null);
   const [isValidating, setIsValidating] = useState(false);
   const [hasInstallations, setHasInstallations] = useState(true);
@@ -62,7 +64,7 @@ export function ClaudeBinaryDialog({ open, onOpenChange, onSuccess, onError }: C
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
             <FileQuestion className="w-5 h-5" />
-            Select Claude Code Installation
+            {t("settings.claude.selectInstallation")}
           </DialogTitle>
           <DialogDescription className="space-y-3 mt-4">
             {checkingInstallations ? (
@@ -72,19 +74,17 @@ export function ClaudeBinaryDialog({ open, onOpenChange, onSuccess, onError }: C
               </div>
             ) : hasInstallations ? (
               <p>
-                Multiple Claude Code installations were found on your system. 
-                Please select which one you'd like to use.
+                {t("settings.claude.multipleInstallationsFound")}
               </p>
             ) : (
               <>
                 <p>
-                  Claude Code was not found in any of the common installation locations. 
-                  Please install Claude Code to continue.
+                  {t("settings.claude.notFoundMessage")}
                 </p>
                 <div className="flex items-center gap-2 p-3 bg-muted rounded-md">
                   <AlertCircle className="w-4 h-4 text-muted-foreground" />
                   <p className="text-sm text-muted-foreground">
-                    <span className="font-medium">Searched locations:</span> PATH, /usr/local/bin, 
+                    <span className="font-medium">{t("settings.claude.searchedLocations")}:</span> PATH, /usr/local/bin,
                     /opt/homebrew/bin, ~/.nvm/versions/node/*/bin, ~/.claude/local, ~/.local/bin
                   </p>
                 </div>
@@ -94,7 +94,7 @@ export function ClaudeBinaryDialog({ open, onOpenChange, onSuccess, onError }: C
               <div className="flex items-center gap-2 p-3 bg-muted rounded-md">
                 <Terminal className="w-4 h-4 text-muted-foreground" />
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium">Tip:</span> You can install Claude Code using{" "}
+                  <span className="font-medium">{t("settings.claude.tip")}:</span> {t("settings.claude.installTip")}{" "}
                   <code className="px-1 py-0.5 bg-black/10 dark:bg-white/10 rounded">npm install -g @claude</code>
                 </p>
               </div>
@@ -118,20 +118,20 @@ export function ClaudeBinaryDialog({ open, onOpenChange, onSuccess, onError }: C
             className="mr-auto"
           >
             <ExternalLink className="w-4 h-4 mr-2" />
-            Installation Guide
+            {t("settings.claude.installationGuide")}
           </Button>
           <Button
             variant="outline"
             onClick={() => onOpenChange(false)}
             disabled={isValidating}
           >
-            Cancel
+            {t("common.cancel")}
           </Button>
           <Button 
             onClick={handleSave} 
             disabled={isValidating || !selectedInstallation || !hasInstallations}
           >
-            {isValidating ? "Validating..." : hasInstallations ? "Save Selection" : "No Installations Found"}
+            {isValidating ? t("settings.claude.validating") : hasInstallations ? t("settings.claude.saveSelection") : t("settings.claude.noInstallationsFound")}
           </Button>
         </DialogFooter>
       </DialogContent>

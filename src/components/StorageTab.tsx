@@ -44,6 +44,7 @@ import {
 } from "@/components/ui/tooltip";
 import { api } from "@/lib/api";
 import { Toast, ToastContainer } from "./ui/toast";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface TableInfo {
   name: string;
@@ -81,6 +82,7 @@ interface QueryResult {
  * StorageTab component - A beautiful SQLite database viewer/editor
  */
 export const StorageTab: React.FC = () => {
+  const { t } = useTranslation();
   const [tables, setTables] = useState<TableInfo[]>([]);
   const [selectedTable, setSelectedTable] = useState<string>("");
   const [tableData, setTableData] = useState<TableData | null>(null);
@@ -335,7 +337,7 @@ export const StorageTab: React.FC = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Database className="h-4 w-4 text-primary" />
-              <h3 className="text-sm font-semibold">Database Storage</h3>
+              <h3 className="text-sm font-semibold">{t("settings.storage.databaseStorage")}</h3>
             </div>
             <div className="flex items-center gap-2">
               <Button
@@ -345,7 +347,7 @@ export const StorageTab: React.FC = () => {
                 className="gap-2 h-8 text-xs"
               >
                 <Terminal className="h-3 w-3" />
-                SQL Query
+                {t("storage.buttons.sqlQuery")}
               </Button>
               <Button
                 variant="destructive"
@@ -354,7 +356,7 @@ export const StorageTab: React.FC = () => {
                 className="gap-2 h-8 text-xs"
               >
                 <RefreshCw className="h-3 w-3" />
-                Reset DB
+                {t("storage.buttons.resetDb")}
               </Button>
             </div>
           </div>
@@ -389,9 +391,16 @@ export const StorageTab: React.FC = () => {
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-3 w-3 text-muted-foreground" />
               <Input
-                placeholder="Search in table..."
+                placeholder={t("storage.searchPlaceholder")}
                 value={searchQuery}
-                onChange={(e) => handleSearch(e.target.value)}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onCompositionStart={() => {}}
+                onCompositionEnd={() => handleSearch(searchQuery)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleSearch(searchQuery);
+                  }
+                }}
                 className="pl-8 h-8 text-xs"
               />
             </div>
@@ -404,7 +413,7 @@ export const StorageTab: React.FC = () => {
                 className="gap-2 h-8 text-xs"
               >
                 <Plus className="h-3 w-3" />
-                New Row
+                {t("storage.buttons.newRow")}
               </Button>
             )}
           </div>
@@ -650,9 +659,9 @@ export const StorageTab: React.FC = () => {
       <Dialog open={!!newRow} onOpenChange={() => setNewRow(null)}>
         <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>New Row</DialogTitle>
+            <DialogTitle>{t("storage.dialogs.newRow.title")}</DialogTitle>
             <DialogDescription>
-              Add a new row to the {selectedTable} table.
+              {t("storage.dialogs.newRow.description", { table: selectedTable })}
             </DialogDescription>
           </DialogHeader>
           {newRow && tableData && (
@@ -811,14 +820,14 @@ export const StorageTab: React.FC = () => {
       <Dialog open={showSqlEditor} onOpenChange={setShowSqlEditor}>
         <DialogContent className="max-w-4xl max-h-[80vh]">
           <DialogHeader>
-            <DialogTitle>SQL Query Editor</DialogTitle>
+            <DialogTitle>{t("storage.dialogs.sqlEditor.title")}</DialogTitle>
             <DialogDescription>
-              Execute raw SQL queries on the database. Use with caution.
+              {t("storage.dialogs.sqlEditor.description")}
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="sql-query">SQL Query</Label>
+              <Label htmlFor="sql-query">{t("storage.dialogs.sqlEditor.queryLabel")}</Label>
               <Textarea
                 id="sql-query"
                 value={sqlQuery}

@@ -24,6 +24,7 @@ import { TabManager } from "@/components/TabManager";
 import { TabContent } from "@/components/TabContent";
 import { AgentsModal } from "@/components/AgentsModal";
 import { useTabState } from "@/hooks/useTabState";
+import { useTranslation } from "@/hooks/useTranslation";
 
 type View = 
   | "welcome" 
@@ -45,6 +46,7 @@ type View =
  * AppContent component - Contains the main app logic, wrapped by providers
  */
 function AppContent() {
+  const { t } = useTranslation();
   const [view, setView] = useState<View>("tabs");
   const { createClaudeMdTab, createSettingsTab, createUsageTab, createMCPTab } = useTabState();
   const [projects, setProjects] = useState<Project[]>([]);
@@ -135,7 +137,7 @@ function AppContent() {
       setProjects(projectList);
     } catch (err) {
       console.error("Failed to load projects:", err);
-      setError("Failed to load projects. Please ensure ~/.claude directory exists.");
+      setError(t("projects.list.loadError"));
     } finally {
       setLoading(false);
     }
@@ -153,7 +155,7 @@ function AppContent() {
       setSelectedProject(project);
     } catch (err) {
       console.error("Failed to load sessions:", err);
-      setError("Failed to load sessions for this project.");
+      setError(t("projects.session.loadError"));
     } finally {
       setLoading(false);
     }
@@ -223,7 +225,7 @@ function AppContent() {
               >
                 <h1 className="text-4xl font-bold tracking-tight">
                   <span className="rotating-symbol"></span>
-                  Welcome to Claudia
+                  {t("navigation.welcome.title")}
                 </h1>
               </motion.div>
 
@@ -241,7 +243,7 @@ function AppContent() {
                   >
                     <div className="h-full flex flex-col items-center justify-center p-8">
                       <Bot className="h-16 w-16 mb-4 text-primary" />
-                      <h2 className="text-xl font-semibold">CC Agents</h2>
+                      <h2 className="text-xl font-semibold">{t("navigation.agents.title")}</h2>
                     </div>
                   </Card>
                 </motion.div>
@@ -258,7 +260,7 @@ function AppContent() {
                   >
                     <div className="h-full flex flex-col items-center justify-center p-8">
                       <FolderCode className="h-16 w-16 mb-4 text-primary" />
-                      <h2 className="text-xl font-semibold">CC Projects</h2>
+                      <h2 className="text-xl font-semibold">{t("navigation.projects.title")}</h2>
                     </div>
                   </Card>
                 </motion.div>
@@ -306,12 +308,12 @@ function AppContent() {
                   onClick={() => handleViewChange("welcome")}
                   className="mb-4"
                 >
-                  ← Back to Home
+                  ← {t("navigation.backToHome")}
                 </Button>
                 <div className="mb-4">
-                  <h1 className="text-3xl font-bold tracking-tight">CC Projects</h1>
+                  <h1 className="text-3xl font-bold tracking-tight">{t("navigation.projects.title")}</h1>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Browse your Claude Code sessions
+                    {t("navigation.projects.subtitle")}
                   </p>
                 </div>
               </motion.div>
@@ -373,7 +375,7 @@ function AppContent() {
                           className="w-full max-w-md"
                         >
                           <Plus className="mr-2 h-4 w-4" />
-                          New Claude Code session
+                          {t("projects.session.new")}
                         </Button>
                       </motion.div>
 
@@ -392,7 +394,7 @@ function AppContent() {
                       ) : (
                         <div className="py-8 text-center">
                           <p className="text-sm text-muted-foreground">
-                            No projects found in ~/.claude/projects
+                            {t("projects.list.empty")}
                           </p>
                         </div>
                       )}
@@ -462,33 +464,33 @@ function AppContent() {
         onInfoClick={() => setShowNFO(true)}
         onAgentsClick={() => setShowAgentsModal(true)}
       />
-      
+
       {/* Main Content */}
       <div className="flex-1 overflow-hidden">
         {renderContent()}
       </div>
-      
+
       {/* NFO Credits Modal */}
       {showNFO && <NFOCredits onClose={() => setShowNFO(false)} />}
-      
+
       {/* Agents Modal */}
-      <AgentsModal 
-        open={showAgentsModal} 
-        onOpenChange={setShowAgentsModal} 
+      <AgentsModal
+        open={showAgentsModal}
+        onOpenChange={setShowAgentsModal}
       />
-      
+
       {/* Claude Binary Dialog */}
       <ClaudeBinaryDialog
         open={showClaudeBinaryDialog}
         onOpenChange={setShowClaudeBinaryDialog}
         onSuccess={() => {
-          setToast({ message: "Claude binary path saved successfully", type: "success" });
+          setToast({ message: t("settings.claude.binaryPathSaved"), type: "success" });
           // Trigger a refresh of the Claude version check
           window.location.reload();
         }}
         onError={(message) => setToast({ message, type: "error" })}
       />
-      
+
       {/* Toast Container */}
       <ToastContainer>
         {toast && (
