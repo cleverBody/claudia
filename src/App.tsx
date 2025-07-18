@@ -47,7 +47,7 @@ type View =
  * AppContent component - Contains the main app logic, wrapped by providers
  */
 function AppContent() {
-  const { t } = useTranslation();
+  const { t, getCurrentLanguage } = useTranslation();
   const [view, setView] = useState<View>("tabs");
   const { createClaudeMdTab, createSettingsTab, createUsageTab, createMCPTab } = useTabState();
   const [projects, setProjects] = useState<Project[]>([]);
@@ -316,6 +316,12 @@ function AppContent() {
                   <p className="mt-1 text-sm text-muted-foreground">
                     {t("navigation.projects.subtitle")}
                   </p>
+                  {/* Debug info - remove after fixing */}
+                  {process.env.NODE_ENV === 'development' && (
+                    <div className="text-xs text-red-500 mt-2">
+                      Debug: Current lang: {getCurrentLanguage()}, Title: "{t("navigation.projects.title")}", Subtitle: "{t("navigation.projects.subtitle")}"
+                    </div>
+                  )}
                 </div>
               </motion.div>
 
