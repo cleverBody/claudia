@@ -93,6 +93,11 @@
       "delete": "删除会话",
       "rename": "重命名会话"
     },
+    "runningSessions": {
+      "title": "活跃的 Claude 会话",
+      "running": "运行中",
+      "status": "运行中"
+    },
     "actions": {
       "createProject": "创建项目",
       "deleteProject": "删除项目",

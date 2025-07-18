@@ -93,6 +93,11 @@
       "delete": "Delete Session",
       "rename": "Rename Session"
     },
+    "runningSessions": {
+      "title": "Active Claude Sessions",
+      "running": "running",
+      "status": "Running"
+    },
     "actions": {
       "createProject": "Create Project",
       "deleteProject": "Delete Project",

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { api, type ProcessInfo, type Session } from "@/lib/api";
 import { cn } from "@/lib/utils";
 import { formatISOTimestamp } from "@/lib/date-utils";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface RunningClaudeSessionsProps {
   /**
@@ -25,6 +26,7 @@ export const RunningClaudeSessions: React.FC<RunningClaudeSessionsProps> = ({
   onSessionClick,
   className,
 }) => {
+  const { t } = useTranslation();
   const [runningSessions, setRunningSessions] = useState<ProcessInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -99,10 +101,10 @@ export const RunningClaudeSessions: React.FC<RunningClaudeSessionsProps> = ({
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-1">
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <h3 className="text-sm font-medium">Active Claude Sessions</h3>
+          <h3 className="text-sm font-medium">{t("projects.runningSessions.title")}</h3>
         </div>
         <span className="text-xs text-muted-foreground">
-          ({runningSessions.length} running)
+          ({runningSessions.length} {t("projects.runningSessions.running")})
         </span>
       </div>
 
@@ -135,7 +137,7 @@ export const RunningClaudeSessions: React.FC<RunningClaudeSessionsProps> = ({
                             {sessionId.substring(0, 20)}...
                           </p>
                           <span className="text-xs text-green-600 font-medium">
-                            Running
+                            {t("projects.runningSessions.status")}
                           </span>
                         </div>
                         
