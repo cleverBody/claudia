@@ -25,6 +25,7 @@ import { TabContent } from "@/components/TabContent";
 import { AgentsModal } from "@/components/AgentsModal";
 import { useTabState } from "@/hooks/useTabState";
 import { useTranslation } from "@/hooks/useTranslation";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 type View = 
   | "welcome" 
@@ -510,11 +511,13 @@ function AppContent() {
  */
 function App() {
   return (
-    <OutputCacheProvider>
-      <TabProvider>
-        <AppContent />
-      </TabProvider>
-    </OutputCacheProvider>
+    <ThemeProvider>
+      <OutputCacheProvider>
+        <TabProvider>
+          <AppContent />
+        </TabProvider>
+      </OutputCacheProvider>
+    </ThemeProvider>
   );
 }
 

@@ -333,6 +333,8 @@
     "general": {
       "title": "常规",
       "generalSettings": "常规设置",
+      "theme": "主题",
+      "themeDesc": "选择应用程序的外观主题",
       "includeCoAuthoredBy": "包含共同作者",
       "includeCoAuthoredByDesc": "在提交信息中包含共同作者信息",
       "verboseOutput": "详细输出",
@@ -791,5 +793,10 @@
     "noRunningAgents": "暂无运行中代理",
     "executionsWillAppear": "代理执行将在启动时显示在此处",
     "started": "开始时间"
+  },
+  "theme": {
+    "light": "浅色主题",
+    "dark": "深色主题",
+    "system": "跟随系统"
   }
 }

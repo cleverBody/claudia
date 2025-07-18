@@ -7,6 +7,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { api, type ClaudeVersionStatus } from "@/lib/api";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "@/hooks/useTranslation";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface TopbarProps {
   /**
@@ -214,6 +215,10 @@ export const Topbar: React.FC<TopbarProps> = ({
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+
+        {/* Theme Toggle */}
+        <ThemeToggle />
+
         <Button
           variant="ghost"
           size="sm"

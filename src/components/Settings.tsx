@@ -26,6 +26,8 @@ import { StorageTab } from "./StorageTab";
 import { HooksEditor } from "./HooksEditor";
 import { SlashCommandsManager } from "./SlashCommandsManager";
 import { useTranslation } from "@/hooks/useTranslation";
+import { useThemeContext } from "@/contexts/ThemeContext";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface SettingsProps {
   /**
@@ -377,6 +379,17 @@ export const Settings: React.FC<SettingsProps> = ({
                   <h3 className="text-base font-semibold mb-4">{t("settings.general.generalSettings")}</h3>
                   
                   <div className="space-y-4">
+                    {/* Theme Setting */}
+                    <div className="flex items-center justify-between">
+                      <div className="space-y-0.5 flex-1">
+                        <Label>{t("settings.general.theme")}</Label>
+                        <p className="text-xs text-muted-foreground">
+                          {t("settings.general.themeDesc")}
+                        </p>
+                      </div>
+                      <ThemeToggle showLabel={true} />
+                    </div>
+
                     {/* Include Co-authored By */}
                     <div className="flex items-center justify-between">
                       <div className="space-y-0.5 flex-1">

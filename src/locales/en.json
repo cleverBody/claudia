@@ -332,6 +332,8 @@
     "general": {
       "title": "General",
       "generalSettings": "General Settings",
+      "theme": "Theme",
+      "themeDesc": "Choose the application appearance theme",
       "includeCoAuthoredBy": "Include Co-authored-by",
       "includeCoAuthoredByDesc": "Include co-author information in commit messages",
       "verboseOutput": "Verbose Output",
@@ -790,5 +792,10 @@
     "noRunningAgents": "No running agents",
     "executionsWillAppear": "Agent executions will appear here when started",
     "started": "Started"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
   }
 }
